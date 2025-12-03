@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 import NavBar from '../components/NavBar';
 import { Book, BookMarked } from 'lucide-react';
-import Swiper from '../components/Swiper'
+import Swiper from '../components/SwiperComponent'
+
+import Book1 from "../assets/images/book1.svg";
+import Book2 from "../assets/images/book2.svg";
+import SwiperComponent from '../components/SwiperComponent';
 
 function MainPage() {
     const [categories, setCategories] = useState([
@@ -16,7 +20,7 @@ function MainPage() {
             <NavBar />
             
             <div className='pt-[100px] bg-white dark:bg-black'>
-                <Swiper />
+                <SwiperComponent />
             
                 <div className='bg-white w-full h-full dark:bg-black pb-8'> 
                     {/* Section Categories cards */}
@@ -26,6 +30,18 @@ function MainPage() {
                                 <h3 className='text-xl font-semibold'>{category.name}</h3>
                             </div>
                         ))}
+                    </div>
+
+                    {/* Section about books */}
+                    <div className='w-[60%] mx-auto mt-8 gap-4 text-black mb-[70px]'>
+                        <div className=' relative h-[300px]'>
+                              <img src={Book2} class="absolute top-8 left-8 z-10 h-[300px] " />
+                              <img src={Book1} class="absolute top-8 left-32 z-20 h-[300px]" />
+
+                              <div className='ml-[400px] top-32 absolute z-30'>
+                                <h1>A lot of great books here</h1>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Section all products */}
@@ -45,6 +61,7 @@ function MainPage() {
                             ))}
                         </div>
                     </div>
+
                 </div>
             </div>
         </>

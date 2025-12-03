@@ -6,14 +6,14 @@ import 'swiper/css';
 
 export default () => {
     return (
-        <div className='w-[60%] mx-auto mt-4 bg-white dark:bg-gray-800 rounded-lg p-6 border border-black'>
+        <div className='w-[60%] mx-auto mt-4 bg-white dark:bg-gray-800 rounded-lg p-6 '>
             <div className="flex gap-4 ">
                 {/* Big Swiper on the Left */}
                 <div className="w-2/3 h-[300px]">
                     <Swiper
                         spaceBetween={20}
                         slidesPerView={1}
-                        className="h-full border border-black border-[5px] rounded-lg"
+                        className="h-full rounded-lg"
                     >
                         <SwiperSlide>
                             <img
@@ -39,7 +39,7 @@ export default () => {
                         <Swiper
                             spaceBetween={10}
                             slidesPerView={1}
-                            className="h-full border border-black border-[5px] rounded-lg"
+                            className="h-full rounded-lg"
                         >
                             <SwiperSlide>
                                 <img
@@ -70,7 +70,7 @@ export default () => {
                         <Swiper
                             spaceBetween={10}
                             slidesPerView={1}
-                            className="h-full border border-black border-[5px] rounded-lg"
+                            className="h-full rounded-lg "
                         >
                             <SwiperSlide>
                                 <img
